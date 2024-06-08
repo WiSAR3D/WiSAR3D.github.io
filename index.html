@@ -290,11 +290,7 @@
 
         const percentage = (offsetX / containerRect.width) * 100;
 
-        // videoLeft.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-        // slider.style.left = `${percentage}%`;
-        // slider.style.transform = `translateX(-50%)`;
-
-        videoLeft.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+        videoLeft.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
         slider.style.left = `${percentage}%`;
 
     });
