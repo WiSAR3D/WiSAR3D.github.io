@@ -174,12 +174,9 @@ body {
 .sliding-videos .video-left {
     z-index: 1;
     width: 50%;
-    /*overflow: hidden;*/
-    /*clip: rect(0, auto, auto, 0);*/
     clip-path: inset(0 50% 0 0);
 }
 .sliding-videos .video-right {
-    /*z-index: 2;*/
     z-index: 0;
     width: 100%;
 }
@@ -190,7 +187,7 @@ body {
     width: 5px;
     background: #fff;
     cursor: ew-resize;
-    /*z-index: 3;*/
     z-index: 2;
     left: 50%;
+    transform: translateX(-50%);
 }
