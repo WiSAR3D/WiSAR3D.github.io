@@ -262,7 +262,7 @@
   </div>
 </section>
 
-<!--/ script for the slider slider. -->
+<!--/ script for the slider. -->
 <script>
     const slider = document.getElementById('slider');
     const videoLeft = document.querySelector('.video-left');
@@ -293,6 +293,9 @@
 
         videoLeft.style.width = `${percentage}%`;
         slider.style.left = `${percentage}%`;
+
+        // Clip the right video accordingly
+        videoLeft.style.clip = `rect(0, ${percentage}%, 100%, 0)`;
     });
 </script>
 
