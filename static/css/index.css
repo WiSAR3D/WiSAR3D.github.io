@@ -155,3 +155,37 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+.video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 450px; /* Aspect ratio 16:9 */
+            overflow: hidden;
+            background: #000;
+}
+.video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-left {
+    z-index: 1;
+    width: 50%;
+}
+.video-right {
+    z-index: 2;
+    width: 100%;
+}
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #fff;
+    cursor: ew-resize;
+    z-index: 3;
+    left: 50%;
+}
