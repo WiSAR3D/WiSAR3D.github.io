@@ -157,7 +157,7 @@ body {
 }
 
 
-.video-container {
+.sliding-videos .video-container {
     position: relative;
     width: 100%;
     max-width: 800px;
@@ -165,23 +165,23 @@ body {
     overflow: hidden;
     background: #000;
 }
-.video {
+.sliding-videos .video {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.video-left {
+.sliding-videos .video-left {
     z-index: 1;
     width: 50%;
     overflow: hidden;
     clip: rect(0, auto, auto, 0);
 }
-.video-right {
+.sliding-videos .video-right {
     z-index: 2;
     width: 100%;
 }
-.slider {
+.sliding-videos .slider {
     position: absolute;
     top: 0;
     bottom: 0;

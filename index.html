@@ -238,7 +238,7 @@
 </section>
 
 
-<section class="section">
+<section class="section sliding-videos">
   <div class="container is-max-desktop">
 
     <!-- Multiple returns slider. -->
@@ -251,7 +251,7 @@
         <div class="video-container">
             <video class="video video-left" src="./static/videos/tents_under_foliage_intensity_animation.mp4" autoplay loop muted></video>
             <video class="video video-right" src="./static/videos/tents_under_foliage_returns_animation.mp4" autoplay loop muted></video>
-            <div class="slider" id="slider"></div>
+            <div class="slider" id="slider-videos"></div>
         </div>
         <!-- Video slider code ends here -->
 
@@ -264,9 +264,9 @@
 
 <!--/ script for the slider. -->
 <script>
-    const slider = document.getElementById('slider');
-    const videoLeft = document.querySelector('.video-left');
-    const videoRight = document.querySelector('.video-right');
+    const slider = document.getElementById('slider-videos');
+    const videoLeft = document.querySelector('.sliding-videos .video-left');
+    const videoRight = document.querySelector('.sliding-videos .video-right');
 
     let isDragging = false;
 
@@ -295,7 +295,7 @@
         slider.style.left = `${percentage}%`;
 
         // Clip the right video accordingly
-        videoLeft.style.clip = `rect(0, ${percentage}%, 100%, 0)`;
+        videoLeft.style.clip = `rect(0, ${offsetX}px, 450px, 0)`;
     });
 </script>
 
