@@ -266,7 +266,6 @@
 <script>
     const slider = document.getElementById('slider-videos');
     const videoLeft = document.querySelector('.sliding-videos .video-left');
-    const videoRight = document.querySelector('.sliding-videos .video-right');
 
     let isDragging = false;
 
@@ -291,11 +290,9 @@
 
         const percentage = (offsetX / containerRect.width) * 100;
 
-        videoLeft.style.width = `${percentage}%`;
+        videoLeft.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
         slider.style.left = `${percentage}%`;
 
-        // Clip the right video accordingly
-        videoLeft.style.clip = `rect(0, ${offsetX}px, 450px, 0)`;
     });
 </script>
 
